@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragments.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/netflix_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="49dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/inter"
+            android:text="Sign up"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button_login1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/button_login1"
+            app:layout_constraintTop_toBottomOf="@+id/button_login1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/input_login1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/et_rounded"
+            android:fontFamily="@font/inter"
+            android:hint="Login"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/input_password1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/et_rounded"
+            android:inputType="textPassword"
+            android:fontFamily="@font/inter"
+            android:hint="Password"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/input_login1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/input_login1"
+            app:layout_constraintTop_toBottomOf="@+id/input_login1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_login1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_rounded"
+            android:fontFamily="@font/inter"
+            android:text="Sign in"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/input_password1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/input_password1"
+            app:layout_constraintTop_toBottomOf="@+id/input_password1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

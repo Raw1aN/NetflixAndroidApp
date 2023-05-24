@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option csharp_namespace = "ChatServerApp.Protos";
+option java_multiple_files = true;
+option java_package = 'com.example.data';
+option java_outer_classname = 'ChatProto';
+
+package proto;
+
+service ChatServer {
+  rpc JoinChannel (JoinChannelRequest) returns (JoinChannelResponse);
+  rpc LeaveChannel (LeaveChannelRequest) returns (LeaveChannelResponse);
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse);
+
+  // stream of messages
+  rpc ChatStream (StreamRequest) returns (stream ChatMessage);
+}
+
+message JoinChannelRequest {
+  string username = 1;
+  string channel = 2;
+}
+
+message JoinChannelResponse {
+  bool success = 1;
+}
+
+message LeaveChannelRequest {
+  string username = 1;
+  string channel = 2;
+}
+
+message LeaveChannelResponse {
+  bool success = 1;
+}
+
+message SendMessageRequest {
+  string username = 1;
+  string channel = 2;
+  string message = 3;
+}
+
+message SendMessageResponse {
+  bool success = 1;
+}
+
+message StreamRequest {
+  string username = 1;
+  string channel = 2;
+}
+
+message ChatMessage {
+  string username = 1;
+  string channel = 2;
+  string message = 3;
+}

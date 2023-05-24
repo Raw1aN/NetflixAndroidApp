@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label=" "
+    app:startDestination="@id/contentListFragment">
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.netflex.mobile.presentation.ui.fragments.LoginFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment2_to_registrationFragment2"
+            app:destination="@id/registrationFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment2"
+        android:name="com.netflex.mobile.presentation.ui.fragments.RegistrationFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentListFragment"
+        android:name="com.netflex.mobile.presentation.ui.fragments.ContentListFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_content_list" >
+        <action
+            android:id="@+id/action_contentListFragment_to_contentViewFragment"
+            app:destination="@id/contentViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentViewFragment"
+        android:name="com.netflex.mobile.presentation.ui.fragments.ContentViewFragment" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.netflex.mobile.presentation.ui.fragments.ChatFragment" />
+</navigation>
